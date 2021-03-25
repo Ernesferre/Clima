@@ -7,8 +7,23 @@ const Formulario = () => {
             <div className="input-field col s12">
                 <input
                     type="text"
-                    name
+                    name="ciudad"
+                    id="ciudad"
+                />
+                <label htmlFor="ciudad ">Ciudad:</label>
 
+            </div>
+
+            <div className="input-field col s12">
+                <select
+                    name="pais"
+                >
+                    <option>
+                         
+                    </option>
+                
+                </select>
+                
             </div>
 
 
