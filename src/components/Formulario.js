@@ -22,7 +22,7 @@ const Formulario = () => {
                     <option value="" >--Seleccione un Pais </option>
                 
                 </select>
-                <label htmlFor="pais ">Pais:</label>
+                <label htmlFor="pais">Pais:</label>
                 
             </div>
 
