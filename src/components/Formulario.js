@@ -10,19 +10,19 @@ const Formulario = () => {
                     name="ciudad"
                     id="ciudad"
                 />
-                <label htmlFor="ciudad ">Ciudad:</label>
+                <label htmlFor="ciudad">Ciudad:</label>
 
             </div>
 
             <div className="input-field col s12">
                 <select
                     name="pais"
+                    id="pais"
                 >
-                    <option>
-                         
-                    </option>
+                    <option value="" >--Seleccione un Pais </option>
                 
                 </select>
+                <label htmlFor="pais ">Pais:</label>
                 
             </div>
 
