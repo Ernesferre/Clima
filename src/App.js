@@ -1,8 +1,17 @@
 import Header from './components/Header';
 import Formulario from './components/Formulario';
+import {useState, useEffect} from 'react';
 
 
 function App() {
+
+  const [busqueda, guardarBusqueda] = useState({
+    ciudad: '',
+    pais: '',
+  })
+
+  const { ciudad , pais } = busqueda;
+
   return (
     <>
       <Header 
@@ -12,7 +21,10 @@ function App() {
           <div className="container">
               <div className="row">
                   <div className="col m6 s12">
-                    <Formulario/>
+                    <Formulario
+                      busqueda={busqueda}
+                      guardarBusqueda={guardarBusqueda}
+                    />
                   </div>
                   <div className="col m6 s12">
                     2
