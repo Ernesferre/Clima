@@ -10,7 +10,18 @@ function App() {
     pais: '',
   })
 
+  const [consultar, guardarConsultar] = useState (false);
+
   const { ciudad , pais } = busqueda;
+
+  useEffect (() => {
+    const consultarAPI = async () => {
+    http://api.openweathermap.org/data/2.5/weather?q=guadalajara,mexico&appid=c11a5e2033f0f29d1b7944c7a5563668
+    }
+    consultarAPI();
+  },[consultar]);
+
+
 
   return (
     <>
@@ -24,6 +35,7 @@ function App() {
                     <Formulario
                       busqueda={busqueda}
                       guardarBusqueda={guardarBusqueda}
+                      guardarConsultar={guardarConsultar}
                     />
                   </div>
                   <div className="col m6 s12">
