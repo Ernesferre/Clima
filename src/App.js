@@ -16,7 +16,17 @@ function App() {
 
   useEffect (() => {
     const consultarAPI = async () => {
-    http://api.openweathermap.org/data/2.5/weather?q=guadalajara,mexico&appid=c11a5e2033f0f29d1b7944c7a5563668
+
+    if (consultar) {
+      const appid = '24f486c3ddc747534961136ccf8d8404';
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appid}`;
+
+      const respuesta = await fetch(url);
+      const resultado = await respuesta.json();
+
+      console.log(resultado);
+    }
+      
     }
     consultarAPI();
   },[consultar]);
@@ -26,7 +36,7 @@ function App() {
   return (
     <>
       <Header 
-        titulo='Clima React App'
+        titulo='Conoce el Clima de tu Ciudad'
       />
       <div className="contenedor-form">
           <div className="container">
