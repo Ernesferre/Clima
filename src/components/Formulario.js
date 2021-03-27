@@ -37,7 +37,8 @@ const handleSubmit = e => {
 
 
 
-    guardarConsultar(true)
+    guardarConsultar(true);
+    
 
 
 }

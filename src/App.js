@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Formulario from './components/Formulario';
+import Clima from './components/Clima';
 import {useState, useEffect} from 'react';
 
 
@@ -11,6 +12,7 @@ function App() {
   })
 
   const [consultar, guardarConsultar] = useState (false);
+  const [resultado, guardadrResultado] = useState({});
 
   const { ciudad , pais } = busqueda;
 
@@ -24,7 +26,8 @@ function App() {
       const respuesta = await fetch(url);
       const resultado = await respuesta.json();
 
-      console.log(resultado);
+      guardadrResultado(resultado);
+      guardarConsultar(false);
     }
       
     }
@@ -49,7 +52,9 @@ function App() {
                     />
                   </div>
                   <div className="col m6 s12">
-                    2
+                    <Clima
+                      resultado={resultado}
+                    />
                   </div>
               </div>
           </div>
